@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/filter.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Zodiac War</title>
+  </head>
+
+  <body id="bg_market" class="market_page">
+    <div class="overlay--mobile"></div>
+    <header class="header-market">
+      <div class="container">
+        <div class="header-market__container">
+          <div class="header-market__logo">
+            <a href="/"><img src="/asset/images/logo.png" alt="logo" /></a>
+            <span>Marketplace</span>
+          </div>
+          <div class="header-market__nav">
+            <ul>
+              <li><a href="#">My Account</a></li>
+              <li class="active">50 ZOW</li>
+              <li><a href="#">EN</a></li>
+              <li>
+                <a href="#"
+                  ><img src="/asset/images/bell.svg" alt="notification"
+                /></a>
+              </li>
+            </ul>
+            <div class="header-market__search">
+              <div>
+                <img src="/asset/images/search_icon_white.svg" alt="search" />
+              </div>
+            </div>
+            <div class="menu-icon js-mobile-menu">
+              <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header-market__menu" id="js-header">
+      <div class="container">
+        <div class="row h-100">
+          <div class="header-market__price col-12">
+            <h4>MyZOW :</h4>
+            <h5>129</h5>
+          </div>
+          <div class="header-market__nav--mobile col-12">
+            <ul>
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Wallet Connect</a></li>
+              <li><a href="#">Language: ENGLISH</a></li>
+              <li><a href="#">Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Log out</a></li>
+            </ul>
+          </div>
+          <div class="header-market__share">
+            <div><span>COMMUNITY:</span></div>
+            <div class="header-market__icon">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="/asset/images/facebook.svg" alt="metaverse"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="/asset/images/twitter.svg" alt="metaverse"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="/asset/images/youtube.svg" alt="metaverse"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="/asset/images/discord.svg" alt="metaverse"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header-market__close js-close">Close</div>
+        </div>
+      </div>
+    </div>
+    <main id="marketplace" class="mt--20">
+      <section class="description">
+        <div class="container">
+          <h1>MARKETPLACE</h1>
+          <p>
+            Here you can search and buy your desired heroes and pets with ZOW
+            Token to strengthen your team
+          </p>
+        </div>
+      </section>
+      <section class="content">
+        <div class="container">
+          <div class="row">
+            <div class="marketplace__filter col-12 col-xl-3">
+              <div class="filter">
+                <div class="filter__logo">
+                  <div>
+                    <img src="/asset/images/logo.png" alt="logo-zodiac" />
+                  </div>
+                </div>
+                <div class="filter-form">
+                  <div class="filter-form__option">
+                    <label for="hero">Item</label>
+                    <div class="zodiac-select">
+                      <select name="hero" id="hero">
+                        <option>Heroes</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="filter-form__option">
+                    <label for="rank">Rank</label>
+                    <div class="zodiac-select">
+                      <select name="rank" id="rank">
+                        <option>All</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="filter-form__option">
+                    <label for="zodiac">Zodiac</label>
+                    <div class="zodiac-select">
+                      <select name="zodiac" id="zodiac">
+                        <option>All</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="filter-form__option filter__option--row mobile--show"
+                  >
+                    <label for="from">From:</label>
+                    <input type="number" name="from" id="from" value="0" />
+                  </div>
+                  <div
+                    class="filter-form__option filter__option--row mobile--show"
+                  >
+                    <label for="to">To:</label>
+                    <input type="number" name="to" id="to" value="10" />
+                  </div>
+                  <div class="filter-form__option mobile">
+                    <label>Price</label>
+                    <!-- //them -->
+                    <div id="slider-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
+                      <div class="noUi-base">
+                        <div class="noUi-origin noUi-connect" style="left: 0%;">
+                          <div class="noUi-handle noUi-handle-lower"></div>
+                        </div>
+                        <div class="noUi-origin noUi-background" style="left: 100%;">
+                          <div class="noUi-handle noUi-handle-upper"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //them -->
+                    <div class="row slider-labels d-flex justify-content-between">
+                      <div class="col-xs-6 caption">
+                        <span class="slider-style">$0</span>
+                      </div>
+                      <div class="col-xs-6 text-right caption">
+                        <span class="slider-style">$100</span>
+                      </div>
+                    </div>
+                    <div
+                      class="row w-100 position-relative mb--10 mt-negative--20"
+                    >
+                      <div>
+                        <span
+                          id="slider-range-value1"
+                          class="slider-style position-absolute"
+                        ></span>
+                      </div>
+                      <div>
+                        <span
+                          id="slider-range-value2"
+                          class="slider-style position-absolute"
+                        ></span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <form>
+                          <input type="hidden" name="min-value" value="" />
+                          <input type="hidden" name="max-value" value="" />
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-form__submit">
+                    <button class="zodiac-btn zodiac-btn--clear">
+                      Clear filters
+                    </button>
+                    <button class="zodiac-btn zodiac-btn--apply">Apply</button>
+                  </div>
+                </div>
+              </div>
+              <div class="market-footer market-footer--filter">
+                <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Term</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="marketplace__item col-12 col-xl-9">
+              <div class="container recent">
+                <div class="zodiac-select zodiac-select--transparent">
+                  <select>
+                    <option name="">Recently added</option>
+                  </select>
+                </div>
+              </div>
+              <div class="content__above">
+                <div class="content__top row d-none">
+                  <div class="search col-6">
+                    <label for="search"
+                      ><img
+                        src="/asset/images/search_icon.svg"
+                        alt="search-icon"
+                    /></label>
+                    <input
+                      type="text"
+                      placeholder="Search.."
+                      id="search"
+                      name="search"
+                    />
+                  </div>
+                  <div class="sort col-6">
+                    <label for="sort">Sort By : </label>
+                    <div class="zodiac-select">
+                      <select name="sort" id="sort">
+                        <option>Date</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="character">
+                  <div class="grid">
+                    <div class="character__item character__item--red">
+                      <div class="character__bg"></div>
+                      <div class="character__over">
+                        <div class="character__image">
+                          <div>
+                            <img
+                              src="/asset/images/market_card_inside.png"
+                              alt="character"
+                            />
+                          </div>
+                        </div>
+                        <div class="character__code">#HYTK567</div>
+                        <div class="character__name">
+                          <img
+                            src="/asset/images/character_name.png"
+                            alt="character"
+                          />
+                          <span>LEO</span>
+                        </div>
+                        <div class="character__price">
+                          <div>
+                            <div class="character__game">10 ZOW</div>
+                            <span class="separator"></span>
+                            <div class="character__currency">59.92 USD</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="character__item character__item--green">
+                      <div class="character__bg"></div>
+                      <div class="character__over">
+                        <div class="character__image">
+                          <div>
+                            <img
+                              src="/asset/images/market_card_inside.png"
+                              alt="character"
+                            />
+                          </div>
+                        </div>
+                        <div class="character__code">#HYTK567</div>
+                        <div class="character__name">
+                          <img
+                            src="/asset/images/character_name.png"
+                            alt="character"
+                          />
+                          <span>GEMINI</span>
+                        </div>
+                        <div class="character__price">
+                          <div>
+                            <div class="character__game">10 ZOW</div>
+                            <span class="separator"></span>
+                            <div class="character__currency">59.92 USD</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="character__item character__item--blue">
+                      <div class="character__bg"></div>
+                      <div class="character__over">
+                        <div class="character__image">
+                          <div>
+                            <img
+                              src="/asset/images/market_card_inside.png"
+                              alt="character"
+                            />
+                          </div>
+                        </div>
+                        <div class="character__code">#HYTK567</div>
+                        <div class="character__name">
+                          <img
+                            src="/asset/images/character_name.png"
+                            alt="character"
+                          />
+                          <span>CANCER</span>
+                        </div>
+                        <div class="character__price">
+                          <div>
+                            <div class="character__game">10 ZOW</div>
+                            <span class="separator"></span>
+                            <div class="character__currency">59.92 USD</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="character__item character__item--yellow">
+                      <div class="character__bg"></div>
+                      <div class="character__over">
+                        <div class="character__image">
+                          <div>
+                            <img
+                              src="/asset/images/market_card_inside.png"
+                              alt="character"
+                            />
+                          </div>
+                        </div>
+                        <div class="character__code">#HYTK567</div>
+                        <div class="character__name character__name--yellow">
+                          <img
+                            src="/asset/images/character_name.png"
+                            alt="character"
+                          />
+                          <span class="yellow">TAURUS</span>
+                        </div>
+                        <div class="character__price">
+                          <div>
+                            <div class="character__game">10 ZOW</div>
+                            <span class="separator"></span>
+                            <div class="character__currency">59.92 USD</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="character__item character__item--yellow">
+                      <div class="character__bg"></div>
+                      <div class="character__over">
+                        <div class="character__image">
+                          <div>
+                            <img
+                              src="/asset/images/market_card_inside.png"
+                              alt="character"
+                            />
+                          </div>
+                        </div>
+                        <div class="character__code">#HYTK567</div>
+                        <div class="character__name">
+                          <img
+                            src="/asset/images/character_name.png"
+                            alt="character"
+                          />
+                          <span></span>
+                        </div>
+                        <div class="character__price">
+                          <div>
+                            <div class="character__game">10 ZOW</div>
+                            <span class="separator"></span>
+                            <div class="character__currency">59.92 USD</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="character__item character__item--yellow">
+                      <div class="character__bg"></div>
+                      <div class="character__over">
+                        <div class="character__image">
+                          <div>
+                            <img
+                              src="/asset/images/market_card_inside.png"
+                              alt="character"
+                            />
+                          </div>
+                        </div>
+                        <div class="character__code">#HYTK567</div>
+                        <div class="character__name">
+                          <img
+                            src="/asset/images/character_name.png"
+                            alt="character"
+                          />
+                          <span></span>
+                        </div>
+                        <div class="character__price">
+                          <div>
+                            <div class="character__game">10 ZOW</div>
+                            <span class="separator"></span>
+                            <div class="character__currency">59.92 USD</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pagination">
+                  <div class="pagination__container">
+                    <div class="pagination__left">
+                      <button class="zodiac-btn zodiac-btn--pagination">
+                        Next
+                      </button>
+                    </div>
+                    <div class="pagination__right">
+                      <button
+                        class="zodiac-btn zodiac-btn--pagination"
+                      ></button>
+                      <button
+                        class="zodiac-btn zodiac-btn--pagination"
+                      ></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="market-footer market-footer--main">
+      <div class="container">
+        <div class="market-footer__container">
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Term</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

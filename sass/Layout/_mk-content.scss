@@ -1,0 +1,252 @@
+.content {
+    .marketplace {
+        &__filter {
+            background-color: $color-black-dark-1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0 25px;
+            @media (min-width: 1024px) {
+                -ms-flex: 0 0 30%;
+                -moz-flex: 0 0 30%;
+                -webkit-flex: 0 0 30%;
+                -o-flex: 0 0 30%;
+                flex: 0 0 30%; 
+            }
+            @media (max-width: 768px) {
+                background-color: transparent;
+                margin-top: 30px; }
+        }
+        &__item {
+            width: 100%;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.5);
+            @media (min-width: 1024px) {
+                -ms-flex: 0 0 70%;
+                -moz-flex: 0 0 70%;
+                -webkit-flex: 0 0 70%;
+                -o-flex: 0 0 70%;
+                flex: 0 0 70%; 
+            } 
+            @media (max-width: 768px) {
+                background-color: transparent; 
+            }
+        }
+    }
+    //chữ
+    .filter {
+        width: 100%;
+        @media (min-width: 1024px) {
+            gap: 12px; 
+        }
+        @media (max-width: 1024px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: space-between; 
+        }
+        &__logo {
+            width: 75%;
+            margin: 30px auto 0;
+            > div {
+                position: relative;
+                padding-bottom: 73.7%;
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0; 
+                }
+            }
+            img {
+                width: 100%;
+                height: 100%; 
+            }
+            @media (max-width: 768px) {
+                display: none; 
+            }
+        }
+        .filter-form {
+            @media (max-width: 768px) {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1%;
+                justify-content: space-between; 
+            }
+            &__option {
+                display: flex;
+                flex-direction: column;
+                font-family: Roboto, sans-serif;
+                margin-top: 22px;
+                width: 100%;
+                @media (max-width: 768px) {
+                    width: 32%; 
+                }
+                label {
+                    font-weight: 500;
+                    font-size: 0.75rem;
+                    color: $color-yellow; 
+                }
+                &.mobile {
+                    &--show {
+                        display: none;
+                        input {
+                            font-weight: 400;
+                            font-size: 0.8125rem;
+                            color: $color-white;
+                            outline: none;
+                            border: none;
+                            padding-top: 7px;
+                            padding-left: 10px;
+                            padding-bottom: 7px;
+                            background: $color-black-grey;
+                            width: 100%;
+                            border-radius: 5px; 
+                        }
+                        label {
+                            margin-bottom: 0; 
+                        }
+                        @media (max-width: 768px) {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 10px;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 10px;
+                            width: 40%; 
+                        }
+                    }
+                    @media (max-width: 768px) {
+                    display: none; 
+                    }
+                }
+            }
+            &__submit {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                @media (max-width: 768px) {
+                    display: none; 
+                }
+                > button {
+                    width: 45%;
+                }
+            }
+        }
+        #slider-range {
+            width: 93%;
+            margin: 3px auto 0; 
+        }
+    }
+    &__above {
+        width: 100%;
+        height: auto; 
+        @media (min-width: 375px) {
+            padding-left: calc(32px - 15px);
+            padding-right: calc(32px - 15px); 
+        }
+        @media (min-width: 320px) {
+            padding-left: 0;
+            padding-right: 0; 
+        }
+        @media (min-width: 320px) {
+            padding-left: 0;
+            padding-right: 0; 
+        }
+    }
+    .search {
+        position: relative;
+        label {
+            position: absolute;
+            top: 5px;
+            right: 8px;
+            left: 22px;
+            width: 16px;
+            height: 16px;
+            img {
+                width: 100%;
+                height: 100%; 
+            }
+        }
+        input {
+            background-color: $color-black-grey;
+            width: 100%;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            padding-left: 30px;
+            font-family: Roboto, sans-serif;
+            font-weight: 400;
+            font-size: 0.75rem;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            color: $color-white; 
+        }
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+        margin-bottom: 12px;
+        @media (min-width: 1024px) {
+            display: flex !important;
+            width: 99%;
+            margin: 32px auto 0; 
+        }
+    }
+    .sort {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        @media (max-width: 1024px) {
+              width: 50%; 
+            .zodiac-select {
+                width: 50%; 
+            }
+        }
+        &__wrapper {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url("/asset/images/market_arrow_select.png");
+                background-position: center;
+                width: 13px;
+                height: 13px;
+                right: 9px; 
+            }
+        }
+        label {
+            font-family: Roboto, sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            color: $color-white;
+            margin-bottom: 0;
+            margin-right: 6px; 
+        }
+        select {
+            background: $color-black-grey;
+            box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            padding: 6px 43px 6px 12px;
+            font-family: Roboto, sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            color: $color-white;
+            border: none;
+            outline: none; 
+        }
+
+    }
+}
+.caption {
+    margin-left: 12px;
+    margin-right: 12px; }

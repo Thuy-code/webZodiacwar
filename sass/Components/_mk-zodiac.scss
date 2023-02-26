@@ -1,0 +1,44 @@
+// Maket: html website 2
+
+.zodiac-select {
+  position: relative;
+  width: 60%;
+  @media (max-width: 1024px) {
+    width: 100%; 
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/asset/images/market_arrow_select.png");
+    background-position: center;
+    width: 13px;
+    height: 13px;
+    right: 9px; 
+  }
+  > select {
+    width: 100%;
+    background: $color-black-grey;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    color: $color-white;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: ""; 
+  }
+  &--transparent > select {
+    background: transparent;
+    padding-left: 0; 
+  }
+}
+  

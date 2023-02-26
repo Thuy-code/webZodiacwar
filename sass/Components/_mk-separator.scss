@@ -1,0 +1,12 @@
+.separator {
+    display: block;
+    height: 100%;
+    width: 1px;
+    background: $color-grey-dark;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @media (max-width: 768px) {
+        display: none; 
+    } 
+}

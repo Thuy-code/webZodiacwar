@@ -1,0 +1,36 @@
+.recent {
+    display: none;
+    color: $color-white;
+    width: fit-content;
+    margin-left: 15px;
+    margin-top: 75px;
+    margin-bottom: 10px; 
+    @media (max-width: 768px) {
+        display: block;
+        margin-left: 15px; }
+    @media (max-width: 768px) and (max-width: 576px) {
+        margin-left: 0; }
+    @media (max-width: 768px) and (max-width: 320px) {
+        margin-left: 15px; }
+    @media (max-width: 768px) {
+        > div {
+          position: relative;
+          width: fit-content;
+          width: -moz-fit-content;
+            &:before {
+                content: "";
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url("/asset/images/market_arrow_select.png");
+                background-position: center;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 14px;
+                width: 14px;
+                right: -25px;
+                top: 55%; 
+            }
+        }
+    }
+}

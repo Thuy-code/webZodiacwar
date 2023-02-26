@@ -1,0 +1,22 @@
+.overlay {
+    &--mobile {
+    display: none;
+        @media (max-width: 1024px) {
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            width: 100%;
+            height: auto;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: -1; 
+        }
+    }
+
+}
+.open {
+    display: block;
+    position: fixed; }
+

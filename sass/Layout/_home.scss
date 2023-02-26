@@ -1,0 +1,251 @@
+#home {
+  overflow: hidden;
+  .container {
+    position: relative;
+    @media (min-width: 1200px) {
+      max-width: 1200px; }
+  }
+  section {
+    position: relative;
+    &.full-page {
+      height: 100vh; }
+      }
+  .introduction {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/asset/images/main-introduction.png");
+    background-position: center; 
+    @media (max-width: 576px) {
+      background-position: 63% bottom; 
+    }
+    &__btn {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transform: translateX(-50%) rotate(90deg);
+      bottom: 5rem; 
+      img {
+        width: 70%;
+        height: auto; }
+    }
+    &__overlay {
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-image: url("/asset/images/main-introduction__overlay.png");
+      background-position: bottom;
+      @media (max-width: 576px) {
+        background-size: cover;
+        bottom: -10px;
+      }
+    }
+    &__social {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 20px;
+      z-index: 3;
+      transform-origin: left;
+      @media (max-width: 576px) {
+        bottom: 10px;
+        transform: scale(0.7) translateX(-50%);
+      }
+      > div {
+        display: flex; 
+        a {
+          display: block;
+          margin-right: 15px; }
+      }
+    } 
+  }
+  .characters {
+    min-height: 1152px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/asset/images/main-characters.png");
+    background-position: bottom;
+    @media (max-width: 768px) {
+        min-height: 1024px; }
+    @media (max-width: 576px) {
+        min-height: 650px; }
+    @media (max-width: 375px) {
+        min-height: 570px; }
+    &__container {
+      width: 45%;
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center bottom;
+      background-image: url("/asset/images/pedestal__left.png"); 
+      @media (max-width: 1024px) {
+            width: 60%; } 
+        @media (max-width: 768px) {
+            width: 78%; } 
+        @media (max-width: 576px) {
+            width: 84%; } 
+      img {
+        width: 70%;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        &.top {
+            top: -29%; }
+        &.bottom {
+            bottom: 17%; }
+      }
+      &--left {
+        left: 3%; 
+        @media (max-width: 1024px) {
+            left: -11%; } 
+        @media (max-width: 768px) {
+            left: -26%; }
+            #home .characters__container--left img {
+              left: 58%; } 
+        @media (max-width: 576px) {
+            left: -32%; } 
+      }
+      &--right {
+        right: 3%; 
+        @media (max-width: 1024px) {
+            right: -11%; } 
+        @media (max-width: 768px) {
+            right: -26%;
+          img {
+            left: 42%;
+          }
+        }
+        @media (max-width: 576px) {
+          right: -32%;
+        }
+      }
+    }
+    &__wrapper {
+        position: relative;
+        padding-bottom: 109%; 
+        img {
+          position: absolute; }
+    }
+  }
+  .metaverse {
+    margin-top: 0;
+    padding: 9rem 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/asset/images/main-metaverse.png");
+    background-position: bottom;
+    @media (max-width: 576px) {
+      padding: 6rem 0 4rem; }
+    .section-title {
+      @media (max-width: 576px) {
+        width: 60%; } 
+    }
+    .container {
+      position: relative; }
+    .trailer-item {
+      @media (max-width: 576px) {
+          width: 93%; 
+      } 
+    }
+  }
+  .gameplay {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/asset/images/main-gameplay.png");
+    background-position: bottom;
+    .container {
+      position: relative;
+      padding: 16rem 0;
+      @media (max-width: 576px) {
+        padding: 15rem 0 12rem; }
+    }
+    .section-title {
+      top: 8rem; 
+      @media (max-width: 1024px) {
+          top: 7rem;
+          img {
+            width: 90%;
+            @media (max-width: 576px) {
+                width: 70%; }
+          }
+      }
+      @media (max-width: 576px) {
+          top: 8.5rem; }
+    }
+  }
+  .play-earn {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/asset/images/main-play2earn.png");
+    background-position: bottom;
+    .section-title {
+      @media (max-width: 576px) {
+        width: 60%; 
+      } 
+    }
+    &__text {
+      color: $color-white;
+      text-align: center;
+      font-family: "Roboto";
+      font-weight: 400;
+      font-size: 1.5rem; 
+      @media (max-width: 576px) {
+        display: none; 
+      }
+    }
+    .container {
+      position: relative;
+      padding: 10rem 0 5rem;
+    }
+  }
+
+  .trailer {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/asset/images/main-trailer.png");
+    background-position: center;
+    .container {
+      position: relative; 
+    } 
+    .trailer-item {
+      @media (max-width: 576px) {
+        width: 93%; 
+        &::before {
+          content: "";
+          width: 70px;
+          height: 70px;
+          top: -85px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url("/asset/images/arrow.svg");
+          background-position: center;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          transform: translateX(-50%) rotate(90deg);
+        }
+        &::after {
+          content: "";
+          width: 70px;
+          height: 70px;
+          bottom: -85px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url("/asset/images/arrow.svg");
+          background-position: center;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          transform: translateX(-50%) rotate(-90deg); 
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,401 @@
+.slider {
+    width: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+    user-select: none;
+    -moz-user-select: none;
+    @media (max-width: 576px) {
+        width: 90%;
+        overflow: unset; }
+    &__container {
+        width: 80%;
+        margin: 0 auto; 
+    }
+    .swiper{
+        &-button-prev {
+            width: auto;
+            left: 1rem;
+            outline: none;
+            top: 47%; 
+            &::after {
+                content: "";
+                background-repeat: no-repeat;
+                background-image: url("/asset/images/arrow.svg");
+                background-position: center;
+                background-size: contain;
+                width: 60px;
+                height: 90px;
+                transform: scale(-1); 
+                @media (max-width: 1024px) {
+                    width: 40px;
+                    height: 60px; }
+                @media (max-width: 576px) {
+                    width: 32px;
+                    height: 51px; }
+            }
+            @media (max-width: 576px) {
+                left: 3rem;
+                top: unset;
+                bottom: 5rem; } 
+            @media (max-width: 320px) {
+                    left: 2rem;
+                    top: unset;
+                    bottom: 6rem; }
+        }
+        &-button-next {
+            width: auto;
+            right: 1rem;
+            outline: none;
+            top: 47%; 
+            &::after {
+                content: "";
+                background-repeat: no-repeat;
+                background-image: url("/asset/images/arrow.svg");
+                background-position: center;
+                background-size: contain;
+                width: 60px;
+                height: 90px; 
+                @media (max-width: 1024px) {
+                    width: 40px;
+                    height: 60px; }
+                @media (max-width: 576px) {
+                    width: 32px;
+                    height: 51px; }
+            }
+            @media (max-width: 576px) {
+                right: 3rem;
+                top: unset;
+                bottom: 5rem; }
+            @media (max-width: 320px) {
+                right: 2rem;
+                top: unset;
+                bottom: 6rem; }
+        }
+        &-pagination {
+            bottom: 12.5rem !important; 
+            @media (max-width: 576px) {
+                bottom: 8rem !important; }
+            @media (max-width: 320px) {
+                bottom: 9rem !important; }
+            &-bullet {
+                border-radius: 3px;
+                height: 3px;
+                width: 4rem;
+                background: $color-white !important;
+                opacity: 1 !important;
+                margin: 0 12px !important;
+                @media (max-width: 576px) {
+                    width: 19px;
+                    height: 1.2px;
+                    margin: 0 4px !important; 
+                }
+                &-active {
+                    background: #f59300 !important; 
+                }
+            }
+        }
+    }
+    
+//slider-item
+    //item-container
+    &-item__container {
+        width: 100%;
+        padding-bottom: 50%;
+        position: relative;
+        @media (max-width: 576px) {
+            padding-bottom: 80%; 
+        }
+        &--battle {
+            background: rgba(0, 0, 0, 0.6); 
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0; 
+            }
+        }
+        &--fusion > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0; 
+            .image {
+                @media (max-width: 576px) {
+                    height: 100%; }
+                &:first-child {
+                    width: 50%;
+                    position: relative; 
+                    .image {
+                        &__container > div {
+                            display: flex;
+                            flex-direction: column;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            @media (max-width: 576px) {
+                                height: 100%;
+                                padding-bottom: 0; 
+                            }
+                            .character {
+                                position: relative;
+                                width: 65%;
+                                margin-bottom: 20px;
+                                background: rgba(0, 0, 0, 0.6);
+                                position: relative;
+                                padding-bottom: 39.3%;
+                                img {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0; 
+                                }
+                                @media (max-width: 576px) {
+                                    width: 95%;
+                                    padding-bottom: 74%; 
+                                }
+                                &:last-child {
+                                    margin-bottom: 0; 
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    width: 50%;
+                    position: relative;
+                    .image {
+                        &__container {
+                            @media (max-width: 576px) {
+                            height: 100%;
+                            padding-bottom: 0; 
+                            }
+                            > div {
+                                display: flex;
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: flex-end; 
+                                .character {
+                                    position: relative;
+                                    width: 65%;
+                                    margin-bottom: 20px;
+                                    background: rgba(0, 0, 0, 0.6);
+                                    position: relative;
+                                    padding-bottom: 39.3%;
+                                    img {
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0; 
+                                    }
+                                    @media (max-width: 576px) {
+                                        width: 95%;
+                                        padding-bottom: 74%;
+                                    }
+                                    &:last-child {
+                                        margin-bottom: 0; 
+                                    }
+                                }
+                            }
+                        
+                        }
+                    }
+
+                }
+                &__container {
+                    position: relative;
+                    padding-bottom: 75%;
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0; 
+                    }
+                }
+            }
+        }
+        &--weapon > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            .image {
+                width: 40%;
+                @media (max-width: 576px) {
+                    width: 47%;
+                    height: 100%; 
+                }
+                &__container {
+                    position: relative;
+                    padding-bottom: 75%;
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0; 
+                    }
+                    @media (max-width: 576px) {
+                        height: 100%;
+                        padding-bottom: 0; 
+                    }
+                    .main {
+                        width: 60%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        z-index: 1;
+                        background: rgba(0, 0, 0, 0.6);
+                        @media (max-width: 576px) {
+                            width: 100%; 
+                        }
+                        > div {
+                            padding-bottom: 100%; 
+                            @media (max-width: 576px) {
+                                padding-bottom: 74%; 
+                            }
+                        }
+                    }
+                    .overlap {
+                        width: 40%;
+                        position: absolute;
+                        right: 4.5rem;
+                        bottom: 0;
+                        z-index: 2;
+                        background: rgba(72, 72, 72, 0.6);
+                        @media (max-width: 576px) {
+                            width: 70%;
+                            right: unset;
+                            left: 50%;
+                            bottom: 25px;
+                            transform: translateX(-50%); 
+                        }
+                        > div {
+                            padding-bottom: 117%;
+                            @media (max-width: 576px) {
+                                padding-bottom: 107%; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &--space > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0; 
+            .image {
+                width: 100%;
+                &__container {
+                    background: rgba(0, 0, 0, 0.6);
+                    position: relative;
+                    padding-bottom: 38.5%;
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0; 
+                    }
+                    @media (max-width: 576px) {
+                        padding-bottom: 45.5%; 
+                    }
+                }
+            }
+        }
+        &--pvp > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0; 
+            .image {
+                width: 46%;
+                &__container {
+                    background: rgba(0, 0, 0, 0.6);
+                    position: relative;
+                    padding-bottom: 75%;
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0; 
+                    }
+                    @media (max-width: 576px) {
+                        padding-bottom: 100%; 
+                    } 
+                }
+            }
+        }
+    }
+
+    //item-caption
+    &-item__caption {
+        margin-top: 45px;
+        font-family: "Skranji";
+        font-style: 400;
+        font-weight: 700;
+        font-size: 1.6875rem;
+        color: $color-white;
+        text-shadow: 0px 0px 8px rgba(255, 212, 253, 0.5);
+        text-align: center;
+        @media (max-width: 576px) {
+            width: fit-content;
+            margin-top: 0;
+            position: absolute;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -6.5rem;
+            font-size: 1.25rem; 
+        }
+        @media (max-width: 320px) {
+            bottom: -5.5rem; 
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.mobile-menu {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color-primary-dark;
+    z-index: 9999;
+    padding: 2rem 0;
+    transition: opacity ease-in 0.35s; 
+    > .container {
+      display: flex;
+      flex-direction: column; 
+      @media (max-width: 1024px) {
+          width: 60%; }
+      @media (max-width: 576px) {
+          width: 100%; }
+    }
+    &.open {
+        display: block; }
+    .title {
+        text-align: center;
+        font-family: "Enchanted Land";
+        font-weight: 400;
+        font-size: 1.375rem;
+        color: $color-white;
+        text-transform: uppercase;
+        margin: 20px; 
+    }
+    .close {
+        cursor: pointer;
+        margin-top: 2.5rem;
+        text-align: center;
+        font-family: "Enchanted Land";
+        font-weight: 400;
+        font-size: 1.375rem;
+        color: $color-white;
+        text-transform: uppercase;
+        opacity: 1; 
+        &:hover {
+            color: $color-white; 
+        }
+        span {
+            position: relative;
+            padding-left: 20px;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                left: -5px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url("/asset/images/close.svg");
+                background-position: center; }
+        }
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        text-align: center; 
+        li {
+            border: 2px solid $color-white;
+            box-sizing: border-box;
+            border-radius: 15px;
+            padding: 6px;
+            margin-bottom: 40px;
+            background: transparent;
+            @media (max-width: 576px) {
+                margin-bottom: 20px; 
+            }
+            &.yellow {
+                background: $color-orange-light;
+            }
+            a {
+                display: block;
+                font-family: "Enchanted Land";
+                font-weight: 400;
+                font-size: 1.375rem;
+                color: $color-white;
+                text-decoration: none; }
+        }
+    }
+}

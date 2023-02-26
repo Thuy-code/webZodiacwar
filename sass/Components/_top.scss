@@ -1,0 +1,32 @@
+.to-top {
+  position: fixed;
+  z-index: 9998;
+  right: 40px;
+  bottom: 35px;
+  cursor: pointer;
+  @media (max-width: 576px) {
+    right: 10px;
+    transform: scale(0.6); 
+  }
+  span {
+    position: relative;
+    display: block;
+    font-family: "Skranji";
+    font-weight: 400;
+    font-size: 1.91379rem;
+    color: $color-white;
+    &::before {
+      content: "";
+      width: 72px;
+      height: 72px;
+      top: -60px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("/asset/images/arrow.svg");
+      background-position: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transform: translateX(-50%) rotate(-90deg); }
+  }
+}

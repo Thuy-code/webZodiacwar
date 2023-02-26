@@ -1,0 +1,78 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 8px 0;
+    z-index: 9998;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/asset/images/bg-header-1.png");
+    background-position: top;
+    .container {
+      @media (min-width: 1200px) {
+        max-width: 1200px; } 
+    }
+    .col-md-8 {
+      @media (max-width: 1024px) { 
+        flex: 0 0 100%;
+        max-width: 100%; }
+    }
+    @media (max-width: 1024px) {
+      background: $color-primary-dark;
+      padding: 12px 0; }
+      &__logo {
+        width: 110px;
+        height: auto; 
+        @media (max-width: 768px) {
+            width: 90px; } 
+      }
+      &__container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100%; 
+        &--right {
+          flex-direction: row-reverse; 
+        }
+      }
+      &__navigation {
+        display: flex;
+        list-style-type: none;
+        margin-bottom: 0;
+        @media (max-width: 1024px) {
+          display: none; }
+          li {
+            margin: 0 20px; 
+          }
+          a {
+            display: block;
+            font-family: "Skranji";
+            font-weight: 400;
+            font-size: 1rem;
+            color: $color-pink-light;
+            text-decoration: none; 
+            &:hover {
+              color: $color-pink-light;
+              text-decoration: none; 
+            } 
+            &.zodiac-btn:hover {
+              color: $color-white; }
+          }
+        &--button {
+          align-items: center;
+          a {
+            color: $color-white;
+          }
+        }
+      }
+          
+
+          
+            
+}
+
+
+
+
+    

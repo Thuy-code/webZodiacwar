@@ -1,0 +1,48 @@
+.market-footer {
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+        border-top: 1px solid #E0E0E0;
+        padding: 13px 0; 
+    }
+    &--main {
+        display: none;
+        margin-top: 30px; 
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0; 
+            li {
+                font-family: Roboto, sans-serif;
+                font-weight: 400;
+                font-size: 0.75rem;
+                margin: 0 20px; 
+            }
+            a {
+                color: $color-grey; 
+            }
+        }
+        @media (max-width: 768px) {
+            display: block; 
+        }
+    }
+    &--filter {
+        font-family: Roboto, sans-serif;
+        font-weight: 400;
+        font-size: 0.75rem;
+        margin-top: 100px;
+        @media (max-width: 768px) {
+            display: none; 
+        }
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            list-style: none;
+            a {
+                color: $color-grey;
+                text-decoration: none; 
+            }
+        }
+    }
+}
